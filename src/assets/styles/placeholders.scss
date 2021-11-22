@@ -1,0 +1,18 @@
+@import url("assets/styles/theme.scss");
+
+%capital-letter {
+    &::first-letter {
+        font-size: 46px;
+        float: left;
+        line-height: 0.9;
+        margin-top: 4px;
+        margin-right: 2px;
+    }
+}
+
+%paragraph {
+    font-family: $text-font;
+    font-size: $text-font-size;
+    color: $text-color;
+    text-align: justify;
+}
