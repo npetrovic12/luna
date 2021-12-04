@@ -1,0 +1,16 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border: 1px solid #ccc;
+  background-color: white;
+
+  :first-child {
+    margin-bottom: 16px;
+  }
+
+  .card-body {
+    min-height: 128px;
+    width: 100%;
+  }
+}

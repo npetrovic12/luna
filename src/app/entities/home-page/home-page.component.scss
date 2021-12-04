@@ -5,6 +5,9 @@
   height: 100vh;
   background-color: $weddingColor;
 
+  display: flex;
+  flex-direction: column;
+
   .landing-area {
     position: relative;
     height: 700px;
@@ -81,5 +84,10 @@
         }
       }
     }
+  }
+
+  .page-content {
+    margin-top: 16px;
+    padding: 16px;
   }
 }
