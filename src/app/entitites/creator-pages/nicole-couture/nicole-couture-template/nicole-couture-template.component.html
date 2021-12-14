@@ -9,6 +9,7 @@
     <div class="middle-page-wrapper">
       <div class="decoration-mark"></div>
       <div class="main-image-wrapper">
+        <ng-content select="[mainImage]"></ng-content>
         <div class="main-image-text">
           <p class="image-text break-every-word">
             <ng-content select="[mainTitle]"></ng-content>
@@ -51,8 +52,7 @@
 
   <div class="info-page-wrapper">
     <div class="images-gallery-wrapper">
-      <div class="gallery">
-      </div>
+      <div class="gallery"></div>
     </div>
   </div>
 </div>

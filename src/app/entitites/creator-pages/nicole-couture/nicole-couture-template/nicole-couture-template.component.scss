@@ -14,7 +14,7 @@
 
     .top-page-wrapper {
       display: flex;
-      padding-left: 64px;
+      padding-left: 100px;
       margin-top: 24px;
       margin-bottom: 12px;
 
@@ -50,15 +50,11 @@
 
       .main-image-wrapper {
         position: relative;
-        height: 640px;
-        width: 500px;
         align-self: center;
-        background-image: url("/assets/images/nicole-couture/nc1.webp");
-        background-size: 100% 100%;
 
         .main-image-text {
           position: absolute;
-          left: -25%;
+          left: -64px;
           top: 0;
 
           .image-text {
@@ -82,6 +78,11 @@
           height: 600px;
           width: 300px;
         }
+
+        ::ng-deep img {
+          max-height: calc(80% - 32px);
+          max-width: 80%;
+      }
       }
 
       .vertical-decoration {
@@ -106,8 +107,8 @@
       padding-bottom: 16px;
 
       .main-page-description {
-        padding-left: 128px;
-        padding-top: 4px;
+        padding: 24px;
+        justify-content: center;
         display: flex;
         gap: 48px;
 
