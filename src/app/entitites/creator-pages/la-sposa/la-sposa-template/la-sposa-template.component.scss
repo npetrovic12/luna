@@ -1,0 +1,116 @@
+@use "src/assets/styles/placeholders" as *;
+
+:host {
+    .left-content {
+        height: 100%;
+        margin: 0 16px;
+
+        @media screen and (min-width: 767px) {
+            width: calc(50% - 32px);
+            position: sticky;
+            top: 0;
+            height: 0;
+            min-height: 100vh;
+            margin: 0 32px;
+        }
+
+        &::after {
+            content: "";
+            border-right: 1px solid #ccc;
+            position: absolute;
+            right: -32px;
+            top: 32px;
+            height: calc(100% - 64px);
+        }
+
+        display: grid;
+
+        grid-template-areas:
+            "nav   nav"
+            "title title"
+            "mimg  text"
+            "mimg  text";
+
+        @media screen and (max-width: 1439px) {
+            grid-template-areas:
+                "nav   nav"
+                "title title"
+                "text  text"
+                "text  text";
+
+            .main-image-wrapper {
+                display: none;
+            }
+        }
+
+        grid-template-columns: 1fr 300px;
+        grid-template-rows: 128px 90px 1fr 1fr;
+        gap: 16px;
+
+        .nav-wrapper {
+            grid-area: nav;
+        }
+
+        .main-image-wrapper {
+            grid-area: mimg;
+            ::ng-deep img {
+                max-height: calc(100% - 32px);
+                max-width: 100%;
+            }
+        }
+
+        .text-block {
+            grid-area: text;
+            ::ng-deep {
+                p {
+                    @extend %paragraph;
+
+                    &:first-of-type {
+                        @extend %capital-letter;
+                    }
+                }
+            }
+        }
+
+        .main-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            grid-area: title;
+            margin: 0;
+            white-space: nowrap;
+
+            @extend %title;
+
+            @media screen and (max-width: 767px) {
+                font-size: 64px;
+            }
+        }
+    }
+
+    .right-content {
+        .image-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+            gap: 32px;
+            padding: 16px;
+
+            ::ng-deep {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        @media screen and (min-width: 767px) {
+            margin-left: calc(50% + 32px);
+            margin-top: -100vh;
+            width: calc(50% - 32px);
+            .image-wrapper {
+                padding: 32px 64px;
+            }
+        }
+    }
+}
