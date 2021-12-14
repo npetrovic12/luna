@@ -1,0 +1,30 @@
+<div class="main-wrapper">
+    <div class="left-content">
+
+        <div class="nav-wrapper">
+            <app-page-navbar></app-page-navbar>
+        </div>
+
+        <h1 class="main-title">
+            {{title}}
+        </h1>
+
+        <div class="main-image-wrapper">
+            <ng-content select="[mainImage]"></ng-content>
+        </div>
+
+        <div class="text-block">
+            <ng-content select="[text]"></ng-content>
+
+        </div>
+
+    </div>
+
+    <div class="right-content">
+
+        <div class="image-wrapper">
+            <ng-content select="[rightImage]"></ng-content>
+        </div>
+
+    </div>
+</div>

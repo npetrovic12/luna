@@ -1,6 +1,10 @@
+@use 'src/assets/styles/theme' as *;
 @import url('assets/styles/fonts.scss');
 
 body {
     margin: 0;
     padding: 0;
+    background-color: $background-color;
+    max-width: 1920px;
+    margin: auto;
 }

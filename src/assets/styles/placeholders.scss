@@ -1,4 +1,4 @@
-@import url("assets/styles/theme.scss");
+@import "src/assets/styles/theme.scss";
 
 %capital-letter {
     &::first-letter {
@@ -15,4 +15,10 @@
     font-size: $text-font-size;
     color: $text-color;
     text-align: justify;
+}
+
+%title {
+    font-family: $title-font;
+    font-size: $title-font-size;
+    color: $title-color;
 }
