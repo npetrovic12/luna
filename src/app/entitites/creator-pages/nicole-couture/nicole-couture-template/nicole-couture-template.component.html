@@ -1,0 +1,58 @@
+<div class="template-page">
+  <div class="main-page-wrapper">
+    <div class="top-page-wrapper">
+      <div class="top-decoration">
+        <ng-content select="[topDecorationText]"></ng-content>
+      </div>
+    </div>
+
+    <div class="middle-page-wrapper">
+      <div class="decoration-mark"></div>
+      <div class="main-image-wrapper">
+        <div class="main-image-text">
+          <p class="image-text break-every-word">
+            <ng-content select="[mainTitle]"></ng-content>
+          </p>
+        </div>
+      </div>
+
+      <div class="vertical-decoration">
+        <p class="vertical-text">
+          <ng-content select="[pageDividerStart]"></ng-content>
+          &bull;
+          <ng-content select="[pageDividerEnd]"></ng-content>
+        </p>
+      </div>
+    </div>
+    <div class="bottom-page-wrapper">
+      <div class="main-page-description">
+        <div class="text-item">
+          <div class="text-title">
+            <ng-content select="[infoLocation]"></ng-content>
+          </div>
+          <div class="text-description">
+            <ng-content select="[infoAddress]"></ng-content>
+            <ng-content select="[infoNumber1]"></ng-content>
+            <ng-content select="[infoNumber2]"></ng-content>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-line-decoration">
+        <div class="bottom-line-line"></div>
+        <div class="bottom-line-url">
+          <p>
+            <ng-content select="[infoUrl]"></ng-content>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-page-wrapper">
+    <div class="images-gallery-wrapper">
+      <div class="gallery">
+      </div>
+    </div>
+  </div>
+</div>
