@@ -1,20 +1,37 @@
-@import "src/assets/styles/theme.scss";
+@import "theme.scss";
 
 %capital-letter {
-    &::first-letter {
-        font-size: 46px;
-        float: left;
-        line-height: 0.9;
-        margin-top: 4px;
-        margin-right: 2px;
-    }
+  &::first-letter {
+    font-size: 46px;
+    float: left;
+    line-height: 0.9;
+    margin-top: 4px;
+    margin-right: 2px;
+  }
 }
 
 %paragraph {
-    font-family: $text-font;
-    font-size: $text-font-size;
-    color: $text-color;
-    text-align: justify;
+  font-family: $text-font;
+  font-size: $text-font-size;
+  color: $text-color;
+  text-align: justify;
+}
+
+%paddingBorderBottom {
+  &::after {
+    border-bottom: 3px solid black;
+    content: "";
+    width: 64px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+%elipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 %title {

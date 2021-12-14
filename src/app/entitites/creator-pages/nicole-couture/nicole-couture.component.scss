@@ -1,0 +1,213 @@
+@import "../../../assets/styles/fonts.scss";
+@import "../../../assets/styles/placeholders.scss";
+
+.template-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+
+  .main-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    .top-page-wrapper {
+      display: flex;
+      padding-left: 64px;
+      margin-top: 24px;
+      margin-bottom: 12px;
+
+      .top-decoration {
+        border: 1px solid #a1a3a6;
+        padding: 8px;
+        color: #a1a3a6;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        justify-content: center;
+        padding-left: 0px;
+      }
+    }
+
+    .middle-page-wrapper {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      align-items: center;
+      flex: 1;
+
+      .decoration-mark {
+        display: flex;
+        width: 50px;
+        height: 120px;
+        background-color: #dbab3f;
+
+        @media only screen and (max-width: 1024px) {
+          display: none;
+        }
+      }
+
+      .main-image-wrapper {
+        position: relative;
+        height: 640px;
+        width: 500px;
+        align-self: center;
+        background-image: url("/assets/images/nicole-couture/nc1.webp");
+        background-size: 100% 100%;
+
+        .main-image-text {
+          position: absolute;
+          left: -25%;
+          top: 0;
+
+          .image-text {
+            @extend %paddingBorderBottom;
+            font-family: SortsMillGoudy;
+            font-size: 72px;
+            font-weight: 700;
+            margin-bottom: 4px !important;
+
+            @media only screen and (max-width: 1024px) {
+              font-size: 32px;
+            }
+          }
+
+          @media only screen and (max-width: 1024px) {
+            left: -5%;
+          }
+        }
+
+        @media only screen and (max-width: 1024px) {
+          height: 600px;
+          width: 300px;
+        }
+      }
+
+      .vertical-decoration {
+        display: flex;
+        transform: rotate(180deg);
+        font-weight: 700;
+        writing-mode: tb-rl;
+        font-family: SortsMillGoudy;
+
+        @media only screen and (max-width: 1024px) {
+          display: none;
+        }
+      }
+      @media only screen and (max-width: 1024px) {
+        justify-content: center;
+      }
+    }
+
+    .bottom-page-wrapper {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 16px;
+
+      .main-page-description {
+        padding-left: 128px;
+        padding-top: 4px;
+        display: flex;
+        gap: 48px;
+
+        .text-description {
+          p {
+            @extend %elipsis;
+            font-family: SortsMillGoudy;
+            color: #a1a3a6;
+            margin: 0px !important;
+          }
+        }
+
+        text-title {
+          p {
+            @extend %elipsis;
+            font-family: SortsMillGoudy;
+            font-weight: 700;
+          }
+        }
+        @media only screen and (max-width: 1024px) {
+          padding: 24px;
+        }
+      }
+
+      .bottom-line-decoration {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 24px;
+
+        .bottom-line-line {
+          width: 65%;
+          height: 2px;
+          background-color: black;
+        }
+        .bottom-line-url {
+          p {
+            font-family: SortsMillGoudy;
+            font-weight: 700;
+
+            ::ng-deep {
+              div {
+                @extend %elipsis;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .info-page-wrapper {
+    flex: 1;
+    position: relative;
+
+    .images-gallery-wrapper {
+      display: flex;
+      flex: 1;
+      height: 100%;
+      width: 100%;
+
+      .arrow-left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 48px;
+        cursor: pointer;
+      }
+      .gallery {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+        padding-top: 30px;
+        gap: 16px;
+
+        .current-image-wrapper {
+          height: 640px;
+          width: 500px;
+
+          img.current-img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .arrow-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 48px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .break-every-word {
+    word-spacing: 9999999px;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
+}
