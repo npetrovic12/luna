@@ -75,14 +75,15 @@
         }
 
         @media only screen and (max-width: 1024px) {
-          height: 600px;
-          width: 300px;
+          align-items: center;
+          justify-content: center;
+          display: flex;
         }
 
         ::ng-deep img {
           max-height: calc(80% - 32px);
           max-width: 80%;
-      }
+        }
       }
 
       .vertical-decoration {
