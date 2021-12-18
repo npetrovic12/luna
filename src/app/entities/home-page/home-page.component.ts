@@ -1,18 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { brandCardsMock } from './model/brand-cards.mock';
+import { Component } from '@angular/core';
+import { creatorCards } from './model/creator-cards';
 
 @Component({
   selector: 'luna-home-page',
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss']
 })
-export class HomePageComponent implements OnInit {
+export class HomePageComponent {
 
-  brandCardsMock = brandCardsMock;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  creatorCards = creatorCards;
 
 }

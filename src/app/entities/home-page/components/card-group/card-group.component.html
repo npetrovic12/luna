@@ -1,5 +1,10 @@
 <div class="card-group-container">
-    <ng-container *ngFor="let brandCard of brandCards">
-        <luna-brand-card [brandCard]="brandCard"></luna-brand-card>
+    <ng-container *ngFor="let creatorCard of creatorCards">
+        <luna-creator-card [creatorCard]="creatorCard" [routerLink]="creatorCard.path"></luna-creator-card>
+        <ng-container [ngTemplateOutlet]="separator"></ng-container>
     </ng-container>
 </div>
+
+<ng-template #separator>
+    <div class="separator"></div>
+</ng-template>

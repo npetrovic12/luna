@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { BrandCard } from '../../model/brand-card.model';
+import { CreatorCard } from '../../model/creator-card.model';
 
 @Component({
   selector: 'luna-card-group',
@@ -7,5 +7,5 @@ import { BrandCard } from '../../model/brand-card.model';
   styleUrls: ['./card-group.component.scss']
 })
 export class CardGroupComponent {
-  @Input() brandCards!: BrandCard[];
+  @Input() creatorCards!: CreatorCard[];
 }
