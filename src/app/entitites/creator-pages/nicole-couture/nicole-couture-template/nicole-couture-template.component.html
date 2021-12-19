@@ -1,21 +1,16 @@
-<div class="template-page">
-  <div class="main-page-wrapper">
-    <div class="top-page-wrapper">
-      <div class="top-decoration">
-        <ng-content select="[topDecorationText]"></ng-content>
-      </div>
+<div class="main-wrapper">
+  <div class="left-content">
+    <div class="nav-wrapper">
+      <app-page-navbar></app-page-navbar>
     </div>
 
-    <div class="middle-page-wrapper">
+    <div class="main-image-wrapper">
       <div class="decoration-mark"></div>
-      <div class="main-image-wrapper">
-        <ng-content select="[mainImage]"></ng-content>
-        <div class="main-image-text">
-          <p class="image-text break-every-word">
-            <ng-content select="[mainTitle]"></ng-content>
-          </p>
-        </div>
-      </div>
+
+      <h1 class="main-title break-every-word">
+        {{ title }}
+      </h1>
+      <ng-content select="[mainImage]"></ng-content>
 
       <div class="vertical-decoration">
         <p class="vertical-text">
@@ -25,6 +20,13 @@
         </p>
       </div>
     </div>
+  </div>
+
+  <div class="right-content">
+    <div class="image-wrapper">
+      <ng-content select="[rightImage]"></ng-content>
+    </div>
+
     <div class="bottom-page-wrapper">
       <div class="main-page-description">
         <div class="text-item">
@@ -47,12 +49,6 @@
           </p>
         </div>
       </div>
-    </div>
-  </div>
-
-  <div class="info-page-wrapper">
-    <div class="images-gallery-wrapper">
-      <div class="gallery"></div>
     </div>
   </div>
 </div>
