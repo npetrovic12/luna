@@ -1,51 +1,41 @@
+@use "src/assets/styles/theme" as *;
+
 :host {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  overflow: hidden;
-  height: 256px;
-  min-height: 256px;
-  max-height: 256px;
-  flex: 1 1;
-  cursor: pointer;
-  padding: 16px;
-  overflow: hidden;
-  box-sizing: border-box;
+  .card-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex: 1;
+    cursor: pointer;
 
-  .creator-name {
-    font-family: Petemoss;
-    font-size: 80px;
-  }
-
-  @media screen and (max-width: 960px) {
-    flex-direction: column;
-    height: 160px;
-    min-height: 160px;
-    max-height: 160px;
-
-    #creatorHighlight {
-      display: none;
-    }
-    .creator-name {
-      font-size: 48px;
-    }
-  }
-
-  &:hover {
-    .hover-overlay {
-      display: block;
-    }
-  }
-
-  .hover-overlay {
-    pointer-events: none;
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #ccc;
-    opacity: 0.3;
     width: 100%;
     height: 100%;
+
+    &::before {
+      content: "";
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba($sub-menu-background, 0.2);
+      width: 100%;
+      height: 100%;
+      transform: scale(0);
+      transform-origin: 50% 50%;
+      transition: 0.1s transform;
+    }
+    
+    &:hover {
+      &::before {
+        transform: scale(1);
+      }
+    }
+
+    img {
+      width: calc(100% - 32px);
+      object-fit: cover;
+    }
   }
 }

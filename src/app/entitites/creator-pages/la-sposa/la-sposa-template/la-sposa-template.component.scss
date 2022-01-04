@@ -52,15 +52,6 @@
             padding: 0 32px;
         }
 
-        &::after {
-            content: "";
-            border-right: 1px solid #{$background-line-color};
-            position: absolute;
-            right: 0;
-            top: 32px;
-            height: calc(100% - 64px);
-        }
-
         display: grid;
 
         grid-template-areas:
