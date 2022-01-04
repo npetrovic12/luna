@@ -1,24 +1,62 @@
 @use "src/assets/styles/placeholders" as *;
 
 :host {
+
+    .ornament {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+        width: 80vw;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .ornament-bottom-right {
+        right: 0;
+    }
+
+    .ornament-bottom-left {
+        left: 0;
+        transform: rotateY(180deg);
+    }
+
+    .ornament-bottom-right,
+    .ornament-bottom-left {
+        position: fixed;
+        z-index: -1;
+        bottom: 0;
+
+        img {
+            width: 300px;
+        }
+
+        @media screen and (max-width: 1439px) {
+            display: none;
+        }
+    }
+
     .left-content {
         height: 100%;
         margin: 0 16px;
 
         @media screen and (min-width: 767px) {
-            width: calc(50% - 32px);
+            width: calc(50% - 64px);
             position: sticky;
             top: 0;
             height: 0;
             min-height: 100vh;
-            margin: 0 32px;
+            margin: 0;
+            padding: 0 32px;
         }
 
         &::after {
             content: "";
-            border-right: 1px solid #ccc;
+            border-right: 1px solid #{$background-line-color};
             position: absolute;
-            right: -32px;
+            right: 0;
             top: 32px;
             height: calc(100% - 64px);
         }
@@ -28,15 +66,15 @@
         grid-template-areas:
             "nav   nav"
             "title title"
-            "mimg  text"
-            "mimg  text";
+            "text text"
+            "mimg mimg";
 
         @media screen and (max-width: 1439px) {
             grid-template-areas:
                 "nav   nav"
                 "title title"
-                "text  text"
-                "text  text";
+                "text text"
+                "mimg mimg";
 
             .main-image-wrapper {
                 display: none;
@@ -44,7 +82,7 @@
         }
 
         grid-template-columns: 1fr 300px;
-        grid-template-rows: 128px 90px 1fr 1fr;
+        grid-template-rows: 90px 90px 1fr 1fr;
         gap: 16px;
 
         .nav-wrapper {
@@ -53,7 +91,14 @@
 
         .main-image-wrapper {
             grid-area: mimg;
+            overflow-x: hidden;
+
+            display: flex;
+            justify-content: space-evenly;
+
             ::ng-deep img {
+                box-shadow: 1px 1px 5px #ccc8, -1px -1px 5px #ccc8;
+
                 max-height: calc(100% - 32px);
                 max-width: 100%;
             }
@@ -99,17 +144,18 @@
 
             ::ng-deep {
                 img {
+                    box-shadow: 1px 1px 5px #ccc8, -1px -1px 5px #ccc8;
                     width: 100%;
                 }
             }
         }
 
         @media screen and (min-width: 767px) {
-            margin-left: calc(50% + 32px);
+            margin-left: 50%;
             margin-top: -100vh;
-            width: calc(50% - 32px);
+            width: 50%;
             .image-wrapper {
-                padding: 32px 64px;
+                padding: 32px;
             }
         }
     }

@@ -1,5 +1,6 @@
-@use 'src/assets/styles/theme' as *;
-@import url('assets/styles/fonts.scss');
+@use "src/assets/styles/theme" as *;
+@import url("assets/styles/fonts.scss");
+@import "src/assets/styles/scrollbar";
 
 body {
     margin: 0;

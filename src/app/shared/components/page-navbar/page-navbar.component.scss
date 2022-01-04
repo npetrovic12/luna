@@ -1,4 +1,4 @@
-@import "src/assets/styles/theme";
+@use "src/assets/styles/theme" as *;
 
 :host {
     height: 100%;
@@ -39,24 +39,25 @@
                     font-family: $menu-font;
                     cursor: pointer;
                     white-space: nowrap;
+                    transition: 0.3s color;
+
+                    &:hover {
+                        color: $menu-accent-color;
+                    }
                 }
 
                 .dropdown {
                     .dropdown-items {
                         display: none;
                         position: absolute;
-                        background: #f8fa9bee;
+                        background: $sub-menu-background;
 
                         a {
                             padding: 8px 16px;
-
-                            &:hover {
-                                background: #f0f17e;
-                            }
                         }
                     }
 
-                    &:focus-within {
+                    &:focus-within, &:hover {
                         .dropdown-items {
                             display: flex;
                             flex-direction: column;
