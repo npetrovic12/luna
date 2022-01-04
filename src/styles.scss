@@ -2,12 +2,16 @@
 @import url("assets/styles/fonts.scss");
 @import "src/assets/styles/scrollbar";
 
-body {
-  background-color: $background-color;
+html {
   height: 100%;
   width: 100%;
-  max-width: 1920px;
-  margin: auto;
+}
+body {
   margin: 0;
   padding: 0;
+  background-color: $background-color;
+  max-width: 1920px;
+  margin: auto;
+  height: 100%;
+  width: 100%;
 }
