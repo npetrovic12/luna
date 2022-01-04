@@ -1,18 +1,17 @@
 @use "src/assets/styles/theme" as *;
 @import url("assets/styles/fonts.scss");
-@import "scrollbar";
+@import "src/assets/styles/scrollbar";
 
 html {
-  width: 100vw;
-  height: 100vh;
-}
-
-body {
-  background-color: $background-color;
   height: 100%;
   width: 100%;
-  max-width: 1920px;
-  margin: auto;
+}
+body {
   margin: 0;
   padding: 0;
+  background-color: $background-color;
+  max-width: 1920px;
+  margin: auto;
+  height: 100%;
+  width: 100%;
 }
