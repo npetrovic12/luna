@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { mockContentCards } from './model/content-card.model';
 import { creatorCards } from './model/creator-cards';
 
 @Component({
@@ -7,7 +8,6 @@ import { creatorCards } from './model/creator-cards';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent {
-
   creatorCards = creatorCards;
-
+  contentCards = mockContentCards;
 }

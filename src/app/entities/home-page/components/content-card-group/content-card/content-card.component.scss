@@ -1,0 +1,44 @@
+@use "src/assets/styles/placeholders" as *;
+
+:host {
+  display: flex;
+  gap: 64px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  &:nth-child(2n) {
+    flex-direction: row-reverse;
+  }
+
+  @media screen and (max-width: 960px) {
+    flex-direction: column !important;
+  }
+
+  .text-content {
+    @extend %paragraph;
+
+    display: flex;
+    flex-direction: column;
+
+    p {
+      font-size: 20px;
+    }
+  }
+
+  img {
+    box-shadow: 1px 1px 5px #ccc, -1px -1px 5px #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      transform: scale(1.01);
+    }
+  }
+
+  .text-content,
+  img {
+    width: 400px;
+    max-width: min(400px, 100%);
+  }
+}
