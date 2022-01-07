@@ -1,0 +1,64 @@
+@use "/src/assets/styles/theme.scss" as *;
+
+:host {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(10, 1fr);
+  column-gap: 32px;
+  row-gap: 64px;
+  grid-template-areas:
+    "head head"
+    "map info"
+    "map info"
+    "map info"
+    "map ."
+    "map ."
+    "map .";
+
+  @media screen and (max-width: 960px) {
+    row-gap: 16px;
+    grid-template-areas:
+      "head head"
+      "map map"
+      "map map"
+      "map map"
+      "map map"
+      "map map"
+      "info info"
+      "info info";
+  }
+
+  .page-header {
+    grid-area: head;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+
+  .map {
+    grid-area: map;
+  }
+
+  .contact-info {
+    grid-area: info;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+
+    .contact-info-item {
+      display: flex;
+      width: 100%;
+      gap: 16px;
+      font-family: $text-font;
+      font-size: 28px;
+      padding: 4px 8px;
+      box-sizing: border-box;
+
+      .icon {
+        transform: scale(1.4);
+      }
+    }
+  }
+}
