@@ -3,4 +3,5 @@
     <h2>{{ card?.title }}</h2>
     <p>{{ card?.text }}</p>
 </div>
-<img [src]="card?.imgPath" [alt]="card?.title + ' photo'">
+
+<div class="background" [style.backgroundImage]="'url(' + card?.imgPath + ')'"></div>

@@ -2,5 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 96px;
+
+  :nth-child(2n) {
+    --text-right-offset: 64px;
+    --text-left-offset: initial;
+  }
 }
