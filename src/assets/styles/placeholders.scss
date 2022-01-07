@@ -1,4 +1,4 @@
-@import "theme.scss";
+@use "theme.scss" as *;
 
 %capital-letter {
   &::first-letter {
@@ -35,7 +35,11 @@
 }
 
 %title {
-    font-family: $title-font;
-    font-size: $title-font-size;
-    color: $title-color;
+  font-family: $title-font;
+  font-size: $title-font-size;
+  color: $title-color;
+}
+
+%shadow {
+  box-shadow: 1px 1px 5px #ccc, -1px -1px 5px #ccc;
 }
