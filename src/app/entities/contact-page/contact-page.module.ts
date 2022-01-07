@@ -4,17 +4,17 @@ import { CommonModule } from '@angular/common';
 import { ContactPageRoutingModule } from './contact-page-routing.module';
 import { ContactPageComponent } from './contact-page.component';
 import { PageNavbarModule } from 'src/app/shared/components/page-navbar/page-navbar.module';
-import { GoogleMapsModule } from '@angular/google-maps';
+import { ContactInfoComponent } from './components/contact-info/contact-info.component';
 
 @NgModule({
   declarations: [
-    ContactPageComponent
+    ContactPageComponent,
+    ContactInfoComponent
   ],
   imports: [
     CommonModule,
     ContactPageRoutingModule,
     PageNavbarModule,
-    GoogleMapsModule,
   ]
 })
-export class ContactPageModule { }
+export class ContactPageModule {}

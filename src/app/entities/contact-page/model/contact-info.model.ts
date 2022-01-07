@@ -1,27 +1,32 @@
 export interface ContactInfoItem {
     iconPath: string;
+    label: string;
     value: string;
     href: string;
 }
 
-export const cords = {
-    lat: 44.80634492593947, lng: 20.4702565980087 
-};
+export const BUSSINESS_ADDRESS = 'Beogradska 45/10, 11000 Beograd';
+export const PHONE_NUMBER = '060770634';
+export const INSTAGRAM_USERNAME = 'vencanice_studioluna';
 
 export const contactInfoItems: ContactInfoItem[] = [
     {
-        value: '060/077-06-34',
+        value: PHONE_NUMBER,
+        label: 'Telefon',
         iconPath: '/assets/icons/call_black_24dp.svg',
-        href: 'tel:060770634'
+        href: 'tel:' + PHONE_NUMBER,
     },
     {
-        value: 'Beogradska 45/10, 11000 Beograd',
+        value: BUSSINESS_ADDRESS,
+        label: 'Adresa',
         iconPath: '/assets/icons/location_on_black_24dp.svg',
-        href: ''
+        // generate new one if address changes
+        href: 'https://goo.gl/maps/dM1xmXa2aoHVKoGR7', 
     },
     {
-        value: '@vencanice_studioluna',
+        value: '@' + INSTAGRAM_USERNAME,
+        label: 'Instagram',
         iconPath: '/assets/icons/instagram.svg',
-        href: 'https://www.instagram.com/vencanice_studioluna'
+        href: 'https://www.instagram.com/' + INSTAGRAM_USERNAME,
     },
 ]
