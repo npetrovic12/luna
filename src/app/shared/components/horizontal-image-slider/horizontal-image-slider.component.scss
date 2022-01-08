@@ -1,0 +1,21 @@
+@use "src/assets/styles/theme" as theme;
+
+:host {
+    .image-wrapper {
+        max-height: 50vh;
+        height: 500px;
+        overflow: hidden;
+        position: relative;
+
+        .inner-image-wrapper {
+            display: flex;
+            height: 100%;
+            gap: 16px;
+
+            ::ng-deep img {
+                border-radius: 16px;
+            }
+        }
+
+    }
+}

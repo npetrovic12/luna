@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, Input, ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-la-sposa-template',
@@ -9,10 +9,17 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
 export class LaSposaTemplateComponent implements OnInit {
 
   @Input() title: string = '';
+  @Input() galleryImages: string[] = [];
 
-  constructor() { }
+  trigerred = false;
+
+  constructor(private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.trigerred = true;
+      this.cdr.markForCheck();
+    }, 300);
   }
 
 }

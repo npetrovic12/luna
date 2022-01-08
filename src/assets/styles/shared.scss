@@ -5,4 +5,13 @@
     max-width: min(300px, 100%);
     padding: 16px;
     overflow: hidden;
+
+    &.small {
+        height: 100px;
+        max-height: min(100px, 100%);
+        width: 100px;
+        max-width: min(100px, 100%);
+        padding: 4px;
+        overflow: hidden;
+    }
 }

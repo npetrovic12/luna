@@ -7,16 +7,14 @@
     </div>
 
     <ul class="nav-items">
-        <li>
+        <li [class.selected]="selectedModule === 'dress'">
             <div class="dropdown" tabindex="1">
                 <span>Haljine</span>
                 <div class="dropdown-items">
-                    <a [routerLink]="['/la-sposa']"> La Sposa </a>
-                    <a [routerLink]="['/la-sposa']"> N. Coureti </a>
-                    <a [routerLink]="['/la-sposa']"> N. Coureti </a>
-                    <a [routerLink]="['/la-sposa']"> N. Coureti </a>
-                    <a [routerLink]="['/la-sposa']"> N. Coureti </a>
-                    <a [routerLink]="['/la-sposa']"> N. Coureti </a>
+                    <ng-container *ngFor="let creatorCard of creatorCards">
+                        <luna-navbar-creator-card class="card small" [creatorCard]="creatorCard" [routerLink]="creatorCard.path">
+                        </luna-navbar-creator-card>
+                    </ng-container>
                 </div>
             </div>
         </li>

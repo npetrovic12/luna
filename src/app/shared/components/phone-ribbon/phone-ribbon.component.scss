@@ -1,0 +1,36 @@
+@use "src/assets/styles/placeholders" as *;
+
+:host {
+    .phone-ribbon-wrapper {
+        background: white;
+        border-radius: 32px;
+        box-shadow: 2px 2px 4px #2222, -2px -2px 4px #2222;
+
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: nowrap;
+        align-items: center;
+        cursor: pointer;
+
+        padding: 8px;
+
+        .phone-button {
+            background-image: url("/assets/images/icons/phone.svg");
+            height: 56px;
+            width: 56px;
+            border-radius: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .phone-number {
+            font-size: 24px;
+            font-family: $title-font;
+
+            a {
+                text-decoration: none;
+                color: $title-color;
+            }
+        }
+    }
+}

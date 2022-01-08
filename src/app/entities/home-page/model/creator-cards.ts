@@ -9,6 +9,6 @@ export const creatorCards: CreatorCard[] = [
     {
         imgPath: 'assets/images/nicole-couture/logo.png',
         title: 'Nicole Couture',
-        path: ''
+        path: '/nicole-couture'
     },
 ]

@@ -1,0 +1,41 @@
+@use "src/assets/styles/theme" as *;
+
+:host {
+  .card-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex: 1;
+    cursor: pointer;
+
+    width: 100%;
+    height: 100%;
+
+    &::before {
+      content: "";
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba($sub-menu-background, 0.3);
+      width: 100%;
+      height: 100%;
+      transform: scale(0);
+      transform-origin: 50% 50%;
+      transition: 0.1s transform;
+    }
+    
+    &:hover {
+      &::before {
+        transform: scale(1);
+      }
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

@@ -30,7 +30,14 @@
             gap: 16px;
             padding-left: 0 !important;
 
+            @media screen and (max-width: 769px) {
+                gap: 0;
+            }
+
             li {
+                padding: 8px;
+                border-radius: 24px;
+
                 a,
                 span {
                     text-decoration: none;
@@ -50,19 +57,25 @@
                     .dropdown-items {
                         display: none;
                         position: absolute;
-                        background: $sub-menu-background;
+                        gap: 16px;
 
+                        background: $sub-menu-background;
                         a {
                             padding: 8px 16px;
                         }
                     }
 
-                    &:focus-within, &:hover {
+                    &:focus-within,
+                    &:hover {
                         .dropdown-items {
                             display: flex;
-                            flex-direction: column;
                         }
                     }
+                }
+
+                &.selected {
+                    border: 2px solid;
+                    border-color: rgba($menu-color, 0.7);
                 }
             }
         }
