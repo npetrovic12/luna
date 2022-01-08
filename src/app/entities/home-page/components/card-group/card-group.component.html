@@ -1,5 +1,3 @@
-<div class="card-group-container">
-    <ng-container *ngFor="let creatorCard of creatorCards">
-        <luna-creator-card class="card" [creatorCard]="creatorCard" [routerLink]="creatorCard.path"></luna-creator-card>
-    </ng-container>
-</div>
+<ng-container *ngFor="let creatorCard of creatorCards">
+    <luna-creator-card class="card" [creatorCard]="creatorCard" [routerLink]="creatorCard.path"></luna-creator-card>
+</ng-container>
