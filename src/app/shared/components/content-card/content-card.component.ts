@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
-import { ContentCard } from '../../../model/content-card.model';
+import { ContentCard } from 'src/app/entities/home-page/model/content-card.model';
 
 @Component({
   selector: 'luna-content-card',

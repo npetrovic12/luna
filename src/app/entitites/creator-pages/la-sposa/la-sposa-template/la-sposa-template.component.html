@@ -8,17 +8,12 @@
         {{title}}
     </h1>
 
-    <div class="text-block-wrapper first" [style.backgroundPositionX]="trigerred ? '0' : '-100vw'">
-        <div class="text-block">
-            <ng-content select="[text1]"></ng-content>
-        </div>
-    </div>
+    <luna-content-card class="odd" (onScrollActivate)="activateCard(0)" [class.active]="activated[0]" [card]="cards[0]">
+    </luna-content-card>
 
-    <div class="text-block-wrapper second" [style.backgroundPositionX]="trigerred ? '0' : '-100vw'">
-        <div class="text-block">
-            <ng-content select="[text2]"></ng-content>
-        </div>
-    </div>
+    <luna-content-card class="even" (onScrollActivate)="activateCard(1)" [class.active]="activated[1]"
+        [card]="cards[1]">
+    </luna-content-card>
 
     <div class="slider-title-text">
         <h2>
@@ -28,7 +23,8 @@
 
     <luna-horizontal-image-slider [galleryImages]="galleryImages"></luna-horizontal-image-slider>
 
-    <div class="text-block-wrapper third" [style.backgroundPositionX]="trigerred ? 'center' : '-100vw'">
+    <div class="text-block-wrapper third" (onScrollActivate)="activateCard(2)"
+        [style.backgroundPositionX]="activated[2] ? 'center' : '-100vw'">
         <div class="text-block">
             <ng-content select="[text3a]"></ng-content>
         </div>

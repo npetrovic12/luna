@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { contentCards } from './model/content-card.model';
 
 @Component({
   templateUrl: './la-sposa.component.html',
@@ -16,6 +17,8 @@ export class LaSposaComponent implements OnInit {
     '/assets/images/la-sposa/ls9.jpg',
     '/assets/images/la-sposa/ls6.webp',
   ];
+
+  readonly cards = contentCards;
 
   constructor() { }
 

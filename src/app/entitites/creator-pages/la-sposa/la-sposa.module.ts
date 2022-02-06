@@ -9,6 +9,8 @@ import { PhoneRibbonModule } from 'src/app/shared/components/phone-ribbon/phone-
 import { ParallaxGalleryModule } from 'src/app/shared/components/parallax-gallery/parallax-gallery.module';
 import { HorizontalImageSliderModule } from 'src/app/shared/components/horizontal-image-slider/horizontal-image-slider.module';
 import { PageFooterModule } from 'src/app/shared/components/page-footer/page-footer.module';
+import { ContentCardModule } from 'src/app/shared/components/content-card/content-card.module';
+import { DirectiveModule } from 'src/app/shared/directives/directive.module';
 
 
 @NgModule({
@@ -23,6 +25,8 @@ import { PageFooterModule } from 'src/app/shared/components/page-footer/page-foo
     PhoneRibbonModule,
     HorizontalImageSliderModule,
     PageFooterModule,
+    ContentCardModule,
+    DirectiveModule,
   ]
 })
 export class LaSposaModule { }

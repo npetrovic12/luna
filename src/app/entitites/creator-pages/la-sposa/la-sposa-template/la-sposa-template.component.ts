@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input, ChangeDetectorRef } from '@angular/core';
+import { ContentCard } from '../model/content-card.model';
 
 @Component({
   selector: 'app-la-sposa-template',
@@ -8,18 +9,21 @@ import { Component, OnInit, ChangeDetectionStrategy, Input, ChangeDetectorRef } 
 })
 export class LaSposaTemplateComponent implements OnInit {
 
+  @Input() cards!: ContentCard[];
+
   @Input() title: string = '';
   @Input() galleryImages: string[] = [];
 
-  trigerred = false;
+  activated = [false, false, false];
 
   constructor(private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
-    setTimeout(() => {
-      this.trigerred = true;
-      this.cdr.markForCheck();
-    }, 300);
+  }
+
+  activateCard(index: number) {
+    this.activated[index] = true;
+    this.cdr.detectChanges();
   }
 
 }

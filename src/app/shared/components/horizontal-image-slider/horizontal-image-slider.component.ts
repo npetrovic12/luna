@@ -80,18 +80,18 @@ export class HorizontalImageSliderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // setInterval(() => {
-    //   this.transformPositionX += 0.3;
+    setInterval(() => {
+      this.transformPositionX += 0.3;
 
-    //   if (this.transformPositionX < -this._innerWrapper.nativeElement.scrollWidth * 2 / 3) {
-    //     this.transformPositionX = -this._innerWrapper.nativeElement.scrollWidth / 3;
-    //   }
+      if (this.transformPositionX < -this._innerWrapper.nativeElement.scrollWidth * 2 / 3) {
+        this.transformPositionX = -this._innerWrapper.nativeElement.scrollWidth / 3;
+      }
 
-    //   if (this.transformPositionX > -this._innerWrapper.nativeElement.scrollWidth * 1 / 3) {
-    //     this.transformPositionX = -this._innerWrapper.nativeElement.scrollWidth * 2 / 3;
-    //   }
-    //   this.cdr.detectChanges();
-    // }, 1000 / 60);
+      if (this.transformPositionX > -this._innerWrapper.nativeElement.scrollWidth * 1 / 3) {
+        this.transformPositionX = -this._innerWrapper.nativeElement.scrollWidth * 2 / 3;
+      }
+      this.cdr.detectChanges();
+    }, 1000 / 60);
 
   }
 

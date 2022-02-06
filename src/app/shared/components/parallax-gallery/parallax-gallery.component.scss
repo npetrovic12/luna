@@ -1,4 +1,5 @@
 @use "src/assets/styles/placeholders" as *;
+@use "src/assets/styles/theme" as theme;
 
 :host {
     $scrollbar-width: 12px;
@@ -34,7 +35,7 @@
 
             .image-wrapper {
                 width: 100%;
-                background-color: rgba($scrollbar-line-color, 0.5);
+                background-color: rgba(theme.$scrollbar-line-color, 0.5);
                 border-bottom: 1px solid white;
                 flex: 1;
                 height: 100%;
@@ -49,7 +50,7 @@
                 }
 
                 &.selected {
-                    background-color: rgba($scrollbar-line-color, 1);
+                    background-color: rgba(theme.$scrollbar-line-color, 1);
                     filter: brightness(1.05);
                 }
 
