@@ -1,3 +1,6 @@
-<ng-container *ngFor="let card of cards">
-    <luna-content-card [card]="card"></luna-content-card>
-</ng-container>
+<div class="card-group-wrapper">
+    <ng-container *ngFor="let card of cards; let i = index">
+        <luna-content-card (onScrollActivate)="activateCard(i)" [class.active]="activated[i]" [card]="card"
+            [ngClass]="[i % 2 === 0 ? 'even' : 'odd']"></luna-content-card>
+    </ng-container>
+</div>

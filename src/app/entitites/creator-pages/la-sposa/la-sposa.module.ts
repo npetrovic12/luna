@@ -5,6 +5,12 @@ import { LaSposaRoutingModule } from './la-sposa-routing.module';
 import { LaSposaComponent } from './la-sposa.component';
 import { LaSposaTemplateComponent } from './la-sposa-template/la-sposa-template.component';
 import { PageNavbarModule } from 'src/app/shared/components/page-navbar/page-navbar.module';
+import { PhoneRibbonModule } from 'src/app/shared/components/phone-ribbon/phone-ribbon.module';
+import { ParallaxGalleryModule } from 'src/app/shared/components/parallax-gallery/parallax-gallery.module';
+import { HorizontalImageSliderModule } from 'src/app/shared/components/horizontal-image-slider/horizontal-image-slider.module';
+import { PageFooterModule } from 'src/app/shared/components/page-footer/page-footer.module';
+import { ContentCardModule } from 'src/app/shared/components/content-card/content-card.module';
+import { DirectiveModule } from 'src/app/shared/directives/directive.module';
 
 
 @NgModule({
@@ -15,7 +21,12 @@ import { PageNavbarModule } from 'src/app/shared/components/page-navbar/page-nav
   imports: [
     CommonModule,
     PageNavbarModule,
-    LaSposaRoutingModule
+    LaSposaRoutingModule,
+    PhoneRibbonModule,
+    HorizontalImageSliderModule,
+    PageFooterModule,
+    ContentCardModule,
+    DirectiveModule,
   ]
 })
 export class LaSposaModule { }

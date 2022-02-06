@@ -1,0 +1,11 @@
+<div class="parallax-container" (wheel)="onContainerScroll($event)" >
+    <div class="image-container">
+        <img #parallaxImage *ngFor="let source of imageSources; trackBy: trackByFn" [src]="source" >
+    </div>
+    <!-- <div class="scrollbar">
+        <div *ngFor="let source of imageSources; let i = index; trackBy: trackByFn" class="image-wrapper" tabindex="1"
+            [class.selected]="i === scrollPosition" (click)="scrollToImage(i)" (keyup.enter)="scrollToImage(i)">
+            <div class="image" [style.backgroundImage]="'url(' + source + ')'"></div>
+        </div>
+    </div> -->
+</div>

@@ -1,84 +1,14 @@
 @use "src/assets/styles/placeholders" as *;
+@use "src/assets/styles/theme" as theme;
 
 :host {
-
-    .ornament {
-        position: fixed;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: -1;
-        width: 80vw;
-
-        img {
-            width: 100%;
-        }
-    }
-
-    .ornament-bottom-right {
-        right: 0;
-    }
-
-    .ornament-bottom-left {
-        left: 0;
-        transform: rotateY(180deg);
-    }
-
-    .ornament-bottom-right,
-    .ornament-bottom-left {
-        position: fixed;
-        z-index: -1;
-        bottom: 0;
-
-        img {
-            width: 300px;
-        }
-
-        @media screen and (max-width: 1439px) {
-            display: none;
-        }
-    }
-
-    .left-content {
+    .main-wrapper {
+        display: flex;
+        justify-content: center;
         height: 100%;
-        margin: 0 16px;
-
-        @media screen and (min-width: 767px) {
-            width: calc(50% - 64px);
-            position: sticky;
-            top: 0;
-            height: 0;
-            min-height: 100vh;
-            margin: 0;
-            padding: 0 32px;
-        }
-
-        display: grid;
-
-        grid-template-areas:
-            "nav   nav"
-            "title title"
-            "text text"
-            "mimg mimg";
-
-        @media screen and (max-width: 1439px) {
-            grid-template-areas:
-                "nav   nav"
-                "title title"
-                "text text"
-                "mimg mimg";
-
-            .main-image-wrapper {
-                display: none;
-            }
-        }
-
-        grid-template-columns: 1fr 300px;
-        grid-template-rows: 90px 90px 1fr 1fr;
-        gap: 16px;
-
-        .nav-wrapper {
-            grid-area: nav;
-        }
+        max-height: 100%;
+        z-index: 1;
+        width: 100%;
 
         .main-image-wrapper {
             grid-area: mimg;
@@ -87,25 +17,150 @@
             display: flex;
             justify-content: space-evenly;
 
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: -1;
+
+            filter: opacity(0.25) blur(2px) hue-rotate(135deg);
+            width: 100%;
+
             ::ng-deep img {
                 box-shadow: 1px 1px 5px #ccc8, -1px -1px 5px #ccc8;
-
-                max-height: calc(100% - 32px);
                 max-width: 100%;
             }
         }
 
-        .text-block {
-            grid-area: text;
-            ::ng-deep {
-                p {
-                    @extend %paragraph;
+        @media screen and (min-width: 767px) {
+            min-height: 100vh;
+            margin: 0;
+        }
 
-                    &:first-of-type {
-                        @extend %capital-letter;
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (max-width: 1439px) {
+            .main-image-wrapper {
+                display: none !important;
+            }
+        }
+
+        gap: 32px;
+
+        .text-block-wrapper {
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            min-height: 400px;
+
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            transition: 0.3s background-position-x;
+
+            &.first {
+                justify-content: flex-start;
+                background-image: url("/assets/images/la-sposa/lss2.jpg");
+                transform: rotateY(180deg);
+
+                .text-block {
+                    transform: rotateY(180deg);
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: -64px;
+                        top: 0;
+                        height: 100%;
+                        width: 64px;
+                        background: linear-gradient(90deg, transparent, rgba(theme.$background-color, 0.8));
                     }
                 }
             }
+
+            &.second {
+                justify-content: flex-start;
+                background-image: url("/assets/images/la-sposa/lss1.jpg");
+
+                .text-block {
+                    height: 100%;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        right: -64px;
+                        top: 0;
+                        height: 100%;
+                        width: 64px;
+                        background: linear-gradient(90deg, rgba(theme.$background-color, 0.8), transparent);
+                    }
+                }
+            }
+
+            &.third {
+                justify-content: space-between;
+                background-image: url("/assets/images/la-sposa/logo.svg");
+                background-attachment: initial;
+                background-repeat: no-repeat;
+                background-size: contain;
+
+                .text-block {
+                    min-height: 400px;
+                    display: flex;
+                    align-items: center;
+                }
+
+                @media screen and (max-width: 767px) {
+                    flex-direction: column;
+                    background-position-y: center;
+                    .text-block {
+                        min-height: auto;
+                    }
+                }
+            }
+
+            .text-block {
+                width: 300px;
+                background-color: rgba(theme.$background-color, 0.8);
+                padding: 16px;
+                position: relative;
+                min-height: 400px;
+
+                grid-area: text;
+                ::ng-deep {
+                    p {
+                        @extend %paragraph;
+
+                        &:first-of-type {
+                            @extend %capital-letter;
+                        }
+
+                        @media screen and (max-width: 1239px) {
+                            font-size: 18px;
+                        }
+
+                        @media screen and (max-width: 1599px) {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .slider-title-text {
+            display: flex;
+            justify-content: center;
+            > h2 {
+                @extend %title;
+                font-size: 32px;
+            }
+        }
+
+        luna-horizontal-image-slider {
+            max-height: 50vh;
         }
 
         .main-title {
@@ -119,34 +174,8 @@
 
             @extend %title;
 
-            @media screen and (max-width: 767px) {
-                font-size: 64px;
-            }
-        }
-    }
-
-    .right-content {
-        .image-wrapper {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
-            gap: 32px;
-            padding: 16px;
-
-            ::ng-deep {
-                img {
-                    box-shadow: 1px 1px 5px #ccc8, -1px -1px 5px #ccc8;
-                    width: 100%;
-                }
-            }
-        }
-
-        @media screen and (min-width: 767px) {
-            margin-left: 50%;
-            margin-top: -100vh;
-            width: 50%;
-            .image-wrapper {
-                padding: 32px;
+            @media screen and (max-width: 1023px) {
+                font-size: 42px;
             }
         }
     }

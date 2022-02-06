@@ -1,4 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { creatorCards } from 'src/app/entities/home-page/model/creator-cards';
 
 @Component({
   selector: 'app-page-navbar',
@@ -8,7 +10,12 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 })
 export class PageNavbarComponent implements OnInit {
 
-  constructor() { }
+  creatorCards = creatorCards;
+  selectedModule: string;
+
+  constructor(private route: ActivatedRoute) {
+    this.selectedModule = this.route.snapshot.data['menuItem'];
+  }
 
   ngOnInit(): void {
   }
