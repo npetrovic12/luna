@@ -1,8 +1,4 @@
-export interface ContentCard {
-    imgPath: string;
-    title: string;
-    text: string;
-}
+import { ContentCard } from "src/app/shared/components/content-card/content-card.model";
 
 export const contentCards: ContentCard[] = [
     {

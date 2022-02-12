@@ -2,12 +2,12 @@ import { Component, OnInit, ChangeDetectionStrategy, Input, ChangeDetectorRef } 
 import { ContentCard } from 'src/app/shared/components/content-card/content-card.model';
 
 @Component({
-  selector: 'app-nicole-couture-template',
-  templateUrl: './nicole-couture-template.component.html',
-  styleUrls: ['./nicole-couture-template.component.scss'],
+  selector: 'app-st-patrick-template',
+  templateUrl: './st-patrick-template.component.html',
+  styleUrls: ['./st-patrick-template.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NicoleCoutureTemplateComponent implements OnInit {
+export class StPatrickTemplateComponent implements OnInit {
 
   @Input() cards!: ContentCard[];
 

@@ -1,0 +1,144 @@
+@use "src/assets/styles/placeholders" as *;
+@use "src/assets/styles/theme" as theme;
+
+:host {
+    .main-wrapper {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        max-height: 100%;
+        z-index: 1;
+        width: 100%;
+
+        .main-image-wrapper {
+            grid-area: mimg;
+            overflow-x: hidden;
+
+            display: flex;
+            justify-content: space-evenly;
+
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: -1;
+
+            filter: opacity(0.25) blur(2px) hue-rotate(135deg);
+            width: 100%;
+
+            ::ng-deep img {
+                box-shadow: 1px 1px 5px #ccc8, -1px -1px 5px #ccc8;
+                max-width: 100%;
+            }
+        }
+
+        @media screen and (min-width: 767px) {
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (max-width: 1439px) {
+            .main-image-wrapper {
+                display: none !important;
+            }
+        }
+
+        gap: 32px;
+
+        .text-block-wrapper {
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            min-height: 400px;
+
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            transition: 0.3s background-position-x;
+
+            &.third {
+                justify-content: space-between;
+                background-image: url("/assets/images/st-patrick/logo.png");
+                background-attachment: initial;
+                background-repeat: no-repeat;
+                background-size: auto;
+                background-position: center center;
+
+                .text-block {
+                    min-height: 400px;
+                    display: flex;
+                    align-items: center;
+                }
+
+                @media screen and (max-width: 767px) {
+                    flex-direction: column;
+                    background-position-y: center;
+                    .text-block {
+                        min-height: auto;
+                    }
+                }
+            }
+
+            .text-block {
+                width: 300px;
+                background-color: rgba(theme.$background-color, 0.8);
+                padding: 16px;
+                position: relative;
+                min-height: 400px;
+
+                grid-area: text;
+                ::ng-deep {
+                    p {
+                        @extend %paragraph;
+
+                        &:first-of-type {
+                            @extend %capital-letter;
+                        }
+
+                        @media screen and (max-width: 1239px) {
+                            font-size: 18px;
+                        }
+
+                        @media screen and (max-width: 1599px) {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .slider-title-text {
+            display: flex;
+            justify-content: center;
+            > h2 {
+                @extend %title;
+                font-size: 32px;
+            }
+        }
+
+        luna-horizontal-image-slider {
+            max-height: 50vh;
+        }
+
+        .main-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            grid-area: title;
+            margin: 0;
+            white-space: nowrap;
+
+            @extend %title;
+
+            @media screen and (max-width: 1023px) {
+                font-size: 42px;
+            }
+        }
+    }
+}

@@ -1,4 +1,4 @@
-import { ContentCard } from "../../la-sposa/model/content-card.model";
+import { ContentCard } from "src/app/shared/components/content-card/content-card.model";
 
 export const contentCards: ContentCard[] = [
   {

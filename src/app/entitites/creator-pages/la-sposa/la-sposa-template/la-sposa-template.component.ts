@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input, ChangeDetectorRef } from '@angular/core';
-import { ContentCard } from '../model/content-card.model';
+import { ContentCard } from 'src/app/shared/components/content-card/content-card.model';
 
 @Component({
   selector: 'app-la-sposa-template',
