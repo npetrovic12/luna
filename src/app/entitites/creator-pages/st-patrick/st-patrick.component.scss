@@ -3,6 +3,11 @@
 :host {
     display: block;
 
+    .st-patrick-logo {
+        background-color: white;
+        box-shadow: none !important;
+    }
+
     luna-phone-ribbon {
         position: fixed;
         bottom: 64px;
