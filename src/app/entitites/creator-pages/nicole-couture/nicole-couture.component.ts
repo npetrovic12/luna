@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { contentCards } from './model/content-cards.model';
+import { contentCards } from './content-cards/nicole-couture-content-cards';
 
 @Component({
   templateUrl: './nicole-couture.component.html',

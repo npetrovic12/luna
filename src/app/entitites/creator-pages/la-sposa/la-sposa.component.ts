@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { contentCards } from './model/content-card.model';
+import { contentCards } from './content-cards/la-sposa-content-cards';
 
 @Component({
   templateUrl: './la-sposa.component.html',
