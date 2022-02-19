@@ -1,203 +1,144 @@
 @use "src/assets/styles/placeholders" as *;
+@use "src/assets/styles/theme" as theme;
 
 :host {
-  .left-content {
-    height: 100%;
-    margin: 0 16px;
-
-    @media screen and (min-width: 767px) {
-      width: calc(50% - 32px);
-      position: sticky;
-      top: 0;
-      height: 0;
-      min-height: 100vh;
-      margin: 0 32px;
-    }
-
-    display: grid;
-
-    grid-template-areas:
-      "nav   nav"
-      "mimg  mimg"
-      "mimg  mimg";
-
-
-    @media screen and (max-width: 1439px) {
-      grid-template-areas:
-        "nav   nav"
-        "mimg  mimg"
-        "mimg  mimg";
-
-      .main-image-wrapper {
-        display: none;
-      }
-    }
-
-    grid-template-columns: 1fr 300px;
-    grid-template-rows: 128px 730px 1fr;
-    gap: 16px;
-
-    .nav-wrapper {
-      grid-area: nav;
-    }
-
-    .main-image-wrapper {
-      display: flex;
-      justify-content: space-between;
-      position: relative;
-
-      grid-area: mimg;
-      ::ng-deep img {
-        max-height: calc(100% - 32px);
-        max-width: 100%;
-        flex-basis: 60%;
-      }
-
-      .decoration-mark {
+    .main-wrapper {
         display: flex;
-        align-self: center;
-        width: 50px;
-        height: 120px;
-        background-color: #dbab3f;
-
-        @media only screen and (max-width: 1125px) {
-          display: none;
-        }
-      }
-
-      .vertical-decoration {
-        display: flex;
-        align-self: center;
-        transform: rotate(180deg);
-        font-weight: 700;
-        writing-mode: tb-rl;
-        font-family: SortsMillGoudy;
-
-        @media only screen and (max-width: 1024px) {
-          display: none;
-        }
-      }
-    }
-
-    .text-block {
-      grid-area: text;
-      grid-column: span 2;
-      ::ng-deep {
-        p {
-          @extend %paragraph;
-
-          &:first-of-type {
-            @extend %capital-letter;
-          }
-        }
-      }
-    }
-
-    .main-title {
-      position: absolute;
-      left: 84px;
-      top: 0;
-
-      @extend %paddingBorderBottom;
-      @extend %title;
-      font-weight: bold;
-      margin-bottom: 4px !important;
-
-      @media screen and (max-width: 767px) {
-        font-size: 64px;
-      }
-    }
-  }
-
-  .right-content {
-    .image-wrapper {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
-      gap: 32px;
-      padding: 16px;
-
-      ::ng-deep {
-        img {
-          width: 100%;
-        }
-      }
-    }
-
-    @media screen and (min-width: 767px) {
-      margin-left: calc(50% + 32px);
-      margin-top: -100vh;
-      width: calc(50% - 32px);
-      .image-wrapper {
-        padding: 32px 64px;
-      }
-    }
-  }
-
-  .bottom-page-wrapper {
-    display: flex;
-    flex-direction: column;
-    grid-column: span 2;
-    padding-bottom: 16px;
-    height: 100%;
-    justify-content: end;
-
-    .main-page-description {
-      display: flex;
-      gap: 48px;
-
-      .text-description {
-        ::ng-deep {
-          p {
-            @extend %elipsis;
-            @extend %paragraph;
-            font-family: SortsMillGoudy;
-            color: #a1a3a6;
-            margin: 0px !important;
-          }
-        }
-      }
-
-      text-title {
-        p {
-          @extend %elipsis;
-          font-family: SortsMillGoudy;
-          font-weight: 700;
-        }
-      }
-      @media only screen and (max-width: 1024px) {
         justify-content: center;
-        padding: 24px;
-      }
-    }
+        height: 100%;
+        max-height: 100%;
+        z-index: 1;
+        width: 100%;
 
-    .bottom-line-decoration {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-right: 24px;
+        .main-image-wrapper {
+            grid-area: mimg;
+            overflow-x: hidden;
 
-      .bottom-line-line {
-        width: 65%;
-        height: 2px;
-        background-color: black;
-      }
-      .bottom-line-url {
-        p {
-          font-family: SortsMillGoudy;
-          font-weight: 700;
+            display: flex;
+            justify-content: space-evenly;
 
-          ::ng-deep {
-            div {
-              @extend %elipsis;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: -1;
+
+            filter: opacity(0.25) blur(2px) hue-rotate(135deg);
+            width: 100%;
+
+            ::ng-deep img {
+                box-shadow: 1px 1px 5px #ccc8, -1px -1px 5px #ccc8;
+                max-width: 100%;
             }
-          }
         }
-      }
-    }
-  }
 
-  .break-every-word {
-    word-spacing: 9999999px;
-  }
+        @media screen and (min-width: 767px) {
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (max-width: 1439px) {
+            .main-image-wrapper {
+                display: none !important;
+            }
+        }
+
+        gap: 32px;
+
+        .text-block-wrapper {
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            min-height: 400px;
+
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            transition: 0.3s background-position-x;
+
+            &.third {
+                justify-content: space-between;
+                background-image: url("/assets/images/nicole-couture/logo.png");
+                background-attachment: initial;
+                background-repeat: no-repeat;
+                background-size: auto;
+                background-position: center center;
+
+                .text-block {
+                    min-height: 400px;
+                    display: flex;
+                    align-items: center;
+                }
+
+                @media screen and (max-width: 767px) {
+                    flex-direction: column;
+                    background-position-y: center;
+                    .text-block {
+                        min-height: auto;
+                    }
+                }
+            }
+
+            .text-block {
+                width: 300px;
+                background-color: rgba(theme.$background-color, 0.8);
+                padding: 16px;
+                position: relative;
+                min-height: 400px;
+
+                grid-area: text;
+                ::ng-deep {
+                    p {
+                        @extend %paragraph;
+
+                        &:first-of-type {
+                            @extend %capital-letter;
+                        }
+
+                        @media screen and (max-width: 1239px) {
+                            font-size: 18px;
+                        }
+
+                        @media screen and (max-width: 1599px) {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .slider-title-text {
+            display: flex;
+            justify-content: center;
+            > h2 {
+                @extend %title;
+                font-size: 32px;
+            }
+        }
+
+        luna-horizontal-image-slider {
+            max-height: 50vh;
+        }
+
+        .main-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            grid-area: title;
+            margin: 0;
+            white-space: nowrap;
+
+            @extend %title;
+
+            @media screen and (max-width: 1023px) {
+                font-size: 42px;
+            }
+        }
+    }
 }

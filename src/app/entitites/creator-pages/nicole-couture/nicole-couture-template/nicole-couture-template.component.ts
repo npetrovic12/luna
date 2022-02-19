@@ -1,4 +1,5 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, Input, ChangeDetectorRef } from '@angular/core';
+import { ContentCard } from '../../la-sposa/model/content-card.model';
 
 @Component({
   selector: 'app-nicole-couture-template',
@@ -8,11 +9,21 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
 })
 export class NicoleCoutureTemplateComponent implements OnInit {
 
-  @Input() title: string = '';
+  @Input() cards!: ContentCard[];
 
-  constructor() { }
+  @Input() title: string = '';
+  @Input() galleryImages: string[] = [];
+
+  activated = [false, false, false];
+
+  constructor(private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
+  }
+
+  activateCard(index: number) {
+    this.activated[index] = true;
+    this.cdr.detectChanges();
   }
 
 }
