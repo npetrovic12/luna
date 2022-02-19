@@ -1,0 +1,41 @@
+@use "theme.scss" as *;
+
+%capital-letter {
+  &::first-letter {
+    font-size: 70px;
+    float: left;
+    line-height: 0.9;
+    margin-top: 4px;
+    margin-right: 2px;
+  }
+}
+
+%paragraph {
+  font-family: $text-font;
+  font-size: $text-font-size;
+  color: $text-color;
+  text-align: justify;
+}
+
+%paddingBorderBottom {
+  &::after {
+    border-bottom: 3px solid black;
+    content: "";
+    width: 84px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+%elipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+%title {
+  font-family: $title-font;
+  font-size: $title-font-size;
+  color: $title-color;
+}
