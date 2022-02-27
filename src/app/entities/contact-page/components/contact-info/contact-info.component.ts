@@ -1,5 +1,4 @@
-import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
-import { ContactInfoItem } from '../../model/contact-info.model';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'luna-contact-info',
@@ -8,5 +7,4 @@ import { ContactInfoItem } from '../../model/contact-info.model';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ContactInfoComponent {
-  @Input() contactInfoItems!: ContactInfoItem[];
 }
