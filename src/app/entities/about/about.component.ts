@@ -12,14 +12,12 @@ export class AboutComponent {
   cards: ContentCard[] = [
     {
       title: '',
-      text: 'In vel metus quis purus molestie pretium ac vitae nisi. Sed auctor viverra ante, eu ullamcorper magna semper eu. Nullam ac lorem nec felis fringilla ultricies eu et erat. Vestibulum non mauris nec tortor congue facilisis.' +
-      ' In vel metus quis purus molestie pretium ac vitae nisi. Sed auctor viverra ante, eu ullamcorper magna semper eu. Nullam ac lorem nec felis fringilla ultricies eu et erat. Vestibulum non mauris nec tortor congue facilisis.',
+      text: 'U srcu Beograda, na Vracaru nalazi se nas salon sa širokom ponudom razlicitih modela renomiranih dizajnera.Od 2018. godine se trudimo da ispratimo trendove i prilagodimo se svačijem ukusu.',
       imgPath: 'assets/images/nicole-couture/nc4.webp'
     },
     {
       title: '',
-      text: 'Nulla finibus ullamcorper dolor volutpat molestie. ' +
-      'Cras in ante arcu. In hac habitasse platea dictumst. Nullam sagittis iaculis venenatis. Pellentesque malesuada, dui et laoreet luctus, quam lacus euismod justo, vitae aliquet elit elit ac risus. Nulla finibus ullamcorper dolor volutpat molestie. Cras in ante arcu. In hac habitasse platea dictumst. Nullam sagittis iaculis venenatis. Pellentesque malesuada, dui et laoreet luctus, quam lacus euismod justo, vitae aliquet elit elit ac risus.',
+      text: 'Svake godine nase kolekcije upotpunjujemo novom kolekcijom najpažljiviji odabranim modelima.',
       imgPath: 'assets/images/nicole-couture/nc11.webp'
     }
   ];
