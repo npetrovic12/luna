@@ -4,11 +4,13 @@ export const contentCards: ContentCard[] = [
   {
     imgPath: '/assets/images/nicole-couture/nc1.webp',
     title: 'Nicole couture',
-    text: 'Suspendisse ante ante, convallis ac mattis quis, feugiat vitae orci. Cras a malesuada ante, sit amet hendrerit elit. Fusce congue dignissim massa id egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce vulputate vehicula laoreet. Integer accumsan augue sed est mattis, in fermentum sapien fermentum. Vestibulum quis purus tortor. Sed facilisis.',
+    text: 'Pogledajte najlukzuzniju kolekciju brenda Nicole-NICOLE COUTURE. Atraktivan dizajn koji je prepoznatljiv po jedinstvenom ručnom radu I najfinijim materijalima.',
   },
   {
     imgPath: '/assets/images/nicole-couture/nc13.webp',
     title: 'Nicole couture',
-    text: 'Suspendisse ante ante, convallis ac mattis quis, feugiat vitae orci. Cras a malesuada ante, sit amet hendrerit elit. Fusce congue dignissim massa id egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce vulputate vehicula laoreet. Integer accumsan augue sed est mattis, in fermentum sapien fermentum. Vestibulum quis purus tortor. Sed facilisis.',
+    text: 'Nikoga ne ostavlja ravnodusnim. Najlepse vencanice visoke mode ćete pronaći u nasem salonu.',
   },
 ];
+
+
