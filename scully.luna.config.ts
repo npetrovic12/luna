@@ -9,5 +9,20 @@ export const config: ScullyConfig = {
   spsModulePath: 'YOUR OWN MODULE PATH HERE',
   outDir: './dist/static',
   routes: {
+  home: {
+    type: 'default',
+  },
+  'la-sposa': {
+    type: 'default',
+  },
+  'nicole-couture': {
+    type: 'default',
+  },
+  'st-patrick': {
+    type: 'default',
+  },
+  contact: {
+    type: 'default',
+  },
   }
 };
