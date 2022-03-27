@@ -7,7 +7,7 @@ export const config: ScullyConfig = {
   projectRoot: "./src",
   projectName: "luna",
   spsModulePath: 'YOUR OWN MODULE PATH HERE',
-  outDir: './dist/static',
+  outDir: './docs',
   routes: {
   home: {
     type: 'default',

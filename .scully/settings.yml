@@ -6,6 +6,6 @@ hostName: localhost
 projectName: luna
 homeFolder: C:\Users\Nikola\wworkspace\luna
 distFolder: docs
-outDir: C:\Users\Nikola\wworkspace\luna\dist\static
+outDir: C:\Users\Nikola\wworkspace\luna\docs
 handle404: ''
 allowErrorCollect: false
