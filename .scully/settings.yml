@@ -1,0 +1,11 @@
+identifier: l21e97gal0bfg5rc
+appPort: 1864
+staticPort: 1668
+reloadPort: 2667
+hostName: localhost
+projectName: luna
+homeFolder: C:\Users\Nikola\wworkspace\luna
+distFolder: docs
+outDir: C:\Users\Nikola\wworkspace\luna\dist\static
+handle404: ''
+allowErrorCollect: false
