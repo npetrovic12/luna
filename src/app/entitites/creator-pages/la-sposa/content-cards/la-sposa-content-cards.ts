@@ -4,7 +4,7 @@ export const contentCards: ContentCard[] = [
   {
     imgPath: '/assets/images/la-sposa/lss1.jpg',
     title: 'La couture',
-    text: 'Poreklom iz Barselone, Španija, kao deo Pronovias-a, La Sposa je od tada podigla stil i eleganciju venčanica na potpuno novi nivo. Veoma raznolika kolekcija, koja nudi različite krojeve i stilove koji će vam pomoći da pronađete venčanicu iz snova.',
+    text: 'Poreklom iz Barselone, Španije, kao deo Pronovias grupe, La Sposa je od tada podigla stil i eleganciju venčanica na potpuno novi nivo. Veoma raznolika kolekcija, koja nudi različite krojeve i stilove koji će vam pomoći da pronađete venčanicu iz snova.',
   },
   {
     imgPath: '/assets/images/la-sposa/lss2.jpg',
