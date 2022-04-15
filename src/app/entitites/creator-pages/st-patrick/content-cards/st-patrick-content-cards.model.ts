@@ -9,6 +9,6 @@ export const contentCards: ContentCard[] = [
   {
     imgPath: '/assets/images/st-patrick/sp9.webp',
     title: 'St. Patrick',
-    text: 'Uzevši ime po čuvenoj katedrali u Njujorku, venčanice St. Patrick-a dizajnirane su za savremenu mlada koja veruje da je romansa večna.',
+    text: 'Uzevši ime po čuvenoj katedrali u Njujorku, venčanice St. Patrick-a dizajnirane su za savremenu mladu koja veruje da je romansa večna.',
   },
 ];
