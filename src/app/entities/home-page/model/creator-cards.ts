@@ -7,12 +7,12 @@ export const creatorCards: CreatorCard[] = [
     path: '/la-sposa',
   },
   {
-    imgPath: 'assets/images/nicole-couture/logo.png',
+    imgPath: 'assets/images/nicole-couture/logo.webp',
     title: 'Nicole Couture',
     path: '/nicole-couture',
   },
   {
-    imgPath: 'assets/images/st-patrick/logo.png',
+    imgPath: 'assets/images/st-patrick/logo.webp',
     title: 'St. Patrick',
     path: '/st-patrick',
   },
