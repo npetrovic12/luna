@@ -9,4 +9,8 @@ import { ContentCard } from 'src/app/entities/home-page/model/content-card.model
 })
 export class ContentCardComponent {
   @Input() card!: ContentCard;
+
+  get windowWidth() {
+    return window.innerWidth;
+  }
 }
