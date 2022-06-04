@@ -13,7 +13,7 @@ export class StPatrickComponent implements OnInit {
     '/assets/images/st-patrick/sp4.webp',
     '/assets/images/st-patrick/sp5.webp',
     '/assets/images/st-patrick/sp6.webp',
-    '/assets/images/st-patrick/sp7.jpg',
+    '/assets/images/st-patrick/sp7.webp',
     '/assets/images/st-patrick/sp8.webp',
     '/assets/images/st-patrick/sp9.webp',
     '/assets/images/st-patrick/sp10.webp',
