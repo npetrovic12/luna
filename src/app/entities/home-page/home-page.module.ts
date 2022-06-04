@@ -9,6 +9,7 @@ import { ContentCardGroupComponent } from './components/content-card-group/conte
 import { PageFooterModule } from 'src/app/shared/components/page-footer/page-footer.module';
 import { DirectiveModule } from 'src/app/shared/directives/directive.module';
 import { ContentCardModule } from 'src/app/shared/components/content-card/content-card.module';
+import { PageNavbarModule } from 'src/app/shared/components/page-navbar/page-navbar.module';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { ContentCardModule } from 'src/app/shared/components/content-card/conten
     PageFooterModule,
     DirectiveModule,
     ContentCardModule,
+    PageNavbarModule,
   ]
 })
 export class HomePageModule { }

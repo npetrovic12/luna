@@ -15,6 +15,7 @@ import { NavbarCreatorCardComponent } from './luna-navbar-creator-card/navbar-cr
   ],
   exports: [
     PageNavbarComponent,
+    NavbarCreatorCardComponent,
   ]
 })
 export class PageNavbarModule { }

@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input, ChangeDetectorRef } from '@angular/core';
-import { ContentCard } from 'src/app/shared/components/content-card/content-card.model';
+import { ContentCard } from 'src/app/entities/home-page/model/content-card.model';
 
 @Component({
   selector: 'app-st-patrick-template',

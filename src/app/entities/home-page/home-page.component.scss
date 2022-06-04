@@ -64,6 +64,26 @@
             font-size: 24px;
             font-family: $title-font;
             color: $background-color;
+
+            .dropdown {
+              .dropdown-items {
+                display: none;
+                position: absolute;
+                gap: 16px;
+
+                background: $sub-menu-background;
+                a {
+                  padding: 8px 16px;
+                }
+              }
+
+              &:focus-within,
+              &:hover {
+                .dropdown-items {
+                  display: flex;
+                }
+              }
+            }
           }
         }
       }

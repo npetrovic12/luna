@@ -44,7 +44,7 @@
 
     .text-content {
       @extend %paragraph;
-      
+
       z-index: 1;
       width: 300px;
       min-height: 400px;
@@ -78,7 +78,7 @@
     .card-title {
       margin-top: 64px;
       font-size: 128px;
-      font-family: "NotoSans";
+      font-family: "NotoSans", Helvetica, sans-serif;
       color: white;
       // filter: drop-shadow(2px 2px 6px #222);
       transition: 0.3s transform linear 0.2s;

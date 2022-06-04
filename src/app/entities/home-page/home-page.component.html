@@ -1,9 +1,21 @@
 <div class="top-area">
     <div class="main-background"></div>
     <div class="area-content">
-        <img class="logo" src="/assets/images/logo.png" alt="logo">
+        <img class="logo" src="/assets/images/logo.png" alt="Studio Luna Logo">
         <nav class="menu">
             <ul>
+                <li>
+                    <div class="dropdown" tabindex="1">
+                        <span>Haljine</span>
+                        <div class="dropdown-items">
+                            <ng-container *ngFor="let creatorCard of creatorCards">
+                                <luna-navbar-creator-card class="card small" [creatorCard]="creatorCard"
+                                    [routerLink]="creatorCard.path">
+                                </luna-navbar-creator-card>
+                            </ng-container>
+                        </div>
+                    </div>
+                </li>
                 <li routerLink="/about">O Nama</li>
                 <li routerLink="/contact">Kontakt</li>
             </ul>
@@ -12,7 +24,7 @@
 </div>
 <div class="main-area">
     <div class="creator-cards-title">
-        <h2>Odaberite brend koji bas vama odgovara</h2>
+        <h2>Kod nas ćete pronaći pravu venčanicu za Vas</h2>
     </div>
     <luna-card-group [creatorCards]="creatorCards"></luna-card-group>
     <luna-content-card-group [cards]="contentCards"></luna-content-card-group>
