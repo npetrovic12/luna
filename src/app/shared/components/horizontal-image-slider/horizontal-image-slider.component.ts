@@ -40,7 +40,7 @@ export class HorizontalImageSliderComponent implements OnInit {
       this.transformPositionX -= 2 * ((this.oldMouseX || ev.screenX) - ev.screenX);
       this.oldMouseX = ev.screenX;
 
-      if (this.transformPositionX < -this._innerWrapper.nativeElement.scrollWidth * 2 / 3) {
+      if (this.transformPositionX < -this._innerWrapper.nativeElement.scrollWidth * 3 / 5) {
         this.transformPositionX = -this._innerWrapper.nativeElement.scrollWidth / 3;
       }
 
@@ -54,7 +54,7 @@ export class HorizontalImageSliderComponent implements OnInit {
 
   @HostListener('touchmove', ['$event'])
   private onTouchMove(ev: TouchEvent) {
-    this.transformPositionX -=  ((this.oldMouseX || ev.changedTouches?.[0]?.screenX) - ev.changedTouches?.[0]?.screenX);
+    this.transformPositionX -= ((this.oldMouseX || ev.changedTouches?.[0]?.screenX) - ev.changedTouches?.[0]?.screenX);
     this.oldMouseX = ev.changedTouches?.[0]?.screenX;
 
     if (this.transformPositionX < -this._innerWrapper.nativeElement.scrollWidth * 2 / 3) {

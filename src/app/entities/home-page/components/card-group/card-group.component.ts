@@ -9,15 +9,16 @@ import { CreatorCard } from '../../model/creator-card.model';
 export class CardGroupComponent implements OnInit {
   @Input() creatorCards!: CreatorCard[];
 
+  private counter = 1;
+
   constructor(private elemRef: ElementRef) {
   }
 
   ngOnInit(): void {
     if (window.innerWidth >= 600) return;
     setInterval(() => {
-      const scrollPos = Math.ceil(((this.elemRef.nativeElement.scrollLeft / (this.creatorCards?.length ?? 1)) % window.outerWidth + 1) % this.creatorCards?.length);
-      console.log(scrollPos);
-      this.elemRef.nativeElement.scrollLeft = scrollPos * window.outerWidth + 16;
-    }, 5000);
+      this.elemRef.nativeElement.scrollLeft = (this.counter++) * (window.outerWidth + 16);
+      this.counter %= this.creatorCards?.length ?? 1;
+    }, 4000);
   }
 }
