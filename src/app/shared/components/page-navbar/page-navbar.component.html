@@ -19,7 +19,7 @@
                 </div>
             </div>
         </li>
-        <li>
+        <li [class.selected]="selectedModule === 'about'">
             <a routerLinkActive="active" [routerLink]="['/about']"> O Nama </a>
         </li>
         <li [class.selected]="selectedModule === 'contact'">
