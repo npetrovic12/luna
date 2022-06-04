@@ -1,5 +1,5 @@
 <div class="card-wrapper" [style.backgroundImage]="'url(' + card?.imgPath + ')'">
-    <img [src]="card?.imgPath" [alt]="card?.alt" class="mobile-image">
+    <img [src]="card?.imgPath" [alt]="card?.alt" class="mobile-image" [height]="card?.defaultImageHeight ?? 450">
     <div class="text-content">
         <p>{{ card?.text }}</p>
     </div>
