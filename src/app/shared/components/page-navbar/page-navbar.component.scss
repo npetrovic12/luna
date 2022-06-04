@@ -45,6 +45,11 @@
                     text-decoration: none;
                     color: $menu-color;
                     font-size: $menu-font-size;
+
+                    @media screen and (max-width: 599px) {
+                        font-size: 24px;
+                    }
+
                     font-family: $menu-font;
                     cursor: pointer;
                     white-space: nowrap;
@@ -76,7 +81,7 @@
                 }
 
                 margin: 2px;
-                
+
                 &.selected {
                     margin: 0;
                     border: 2px solid;

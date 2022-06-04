@@ -34,16 +34,6 @@
           font-size: 42px;
         }
       }
-
-      ::ng-deep {
-        luna-content-card {
-          .card-wrapper {
-            .text-content {
-              width: 50% !important;
-            }
-          }
-        }
-      }
     }
   }
 }

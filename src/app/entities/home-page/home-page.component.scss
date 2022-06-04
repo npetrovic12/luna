@@ -9,6 +9,7 @@
   flex-direction: column;
   overflow-x: hidden;
   overflow-y: auto;
+
   .top-area {
     display: flex;
     justify-content: center;
@@ -16,6 +17,12 @@
     height: 500px;
     min-height: 500px;
     max-height: 500px;
+
+    @media screen and (max-width: 599px) {
+      height: 300px;
+      min-height: 300px;
+      max-height: 300px;
+    }
 
     .main-background {
       width: 100%;
@@ -76,7 +83,8 @@
 
       > h2 {
         @extend %title;
-        font-size: 32px;
+        font-size: 24px;
+        padding: 0 16px;
       }
     }
   }

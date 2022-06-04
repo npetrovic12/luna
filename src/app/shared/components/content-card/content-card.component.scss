@@ -16,19 +16,51 @@
     transition: 0.5s background-position-x;
     display: flex;
 
+    .mobile-image {
+      display: none;
+    }
+
+    @media screen and (max-width: 599px) {
+      background-image: none !important;
+      display: flex;
+      flex-direction: column;
+
+      .mobile-image {
+        display: initial;
+      }
+
+      .text-content {
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: -32px;
+          height: 64px;
+          width: 100%;
+          background: linear-gradient(0, $background-color, transparent);
+        }
+      }
+    }
+
     .text-content {
       @extend %paragraph;
+      
       z-index: 1;
       width: 300px;
       min-height: 400px;
       position: relative;
+      text-align: justify;
 
       @media screen and (max-width: 960px) {
-        position: initial;
         top: initial;
         left: initial;
         right: initial;
         padding: 16px;
+      }
+
+      @media screen and (max-width: 599px) {
+        width: initial;
+        min-height: auto;
       }
 
       padding: 16px 32px;
@@ -39,6 +71,7 @@
 
       p {
         font-size: 20px;
+        @extend %capital-letter;
       }
     }
 
@@ -62,15 +95,17 @@
       background-position-x: -100vw;
       justify-content: flex-start;
 
-      .text-content {
-        &::after {
-          content: "";
-          position: absolute;
-          right: -64px;
-          top: 0;
-          height: 100%;
-          width: 64px;
-          background: linear-gradient(90deg, rgba($background-color, 0.8), transparent);
+      @media screen and (min-width: 600px) {
+        .text-content {
+          &::after {
+            content: "";
+            position: absolute;
+            right: -64px;
+            top: 0;
+            height: 100%;
+            width: 64px;
+            background: linear-gradient(90deg, rgba($background-color, 0.8), transparent);
+          }
         }
       }
 
@@ -84,19 +119,22 @@
 
   &.odd {
     .card-wrapper {
-      flex-direction: row-reverse;
       justify-content: flex-end;
       background-position-x: 100vw;
 
-      .text-content {
-        &::after {
-          content: "";
-          position: absolute;
-          left: -64px;
-          top: 0;
-          height: 100%;
-          width: 64px;
-          background: linear-gradient(90deg, transparent, rgba($background-color, 0.8));
+      @media screen and (min-width: 600px) {
+        flex-direction: row-reverse;
+
+        .text-content {
+          &::after {
+            content: "";
+            position: absolute;
+            left: -64px;
+            top: 0;
+            height: 100%;
+            width: 64px;
+            background: linear-gradient(90deg, transparent, rgba($background-color, 0.8));
+          }
         }
       }
 

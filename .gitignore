@@ -29,6 +29,12 @@ chrome-profiler-events*.json
 !.vscode/extensions.json
 .history/*
 
+# scully
+/.scully
+/dist
+/docs
+/scully.log
+
 # misc
 /.angular/cache
 /.sass-cache
