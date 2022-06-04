@@ -30,9 +30,8 @@ chrome-profiler-events*.json
 .history/*
 
 # scully
-/.scully
-/dist
-/docs
+/dist/*
+/docs/*
 /scully.log
 
 # misc
