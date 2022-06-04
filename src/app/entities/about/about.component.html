@@ -1,7 +1,7 @@
 <div class="page">
     <app-page-navbar></app-page-navbar>
     <div class="page-content">
-        <h1 class="main-title">O Nama</h1>
+        <h1 class="main-title">Studio Luna</h1>
         <ng-container *ngFor="let card of cards; index as index">
             <luna-content-card [ngClass]="[index % 2 === 0 ? 'even' : 'odd']" [card]="card" (onScrollActivate)="activateCard(index)" [class.active]="active[index]"></luna-content-card>
         </ng-container>
