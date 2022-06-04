@@ -27,7 +27,6 @@ export class OnScrollActivateDirective {
     }
 
     private checkIfIntersecting(entry: IntersectionObserverEntry) {
-        console.log(window.scrollY + window.innerHeight, entry);
         return (entry as any).isIntersecting;
     }
 }
