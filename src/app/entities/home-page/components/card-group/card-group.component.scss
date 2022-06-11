@@ -7,6 +7,10 @@
   gap: 16px;
   scrollbar-width: none;
 
+  a {
+    display: contents;
+  }
+
   &::-webkit-scrollbar {
     display: none;
   }
