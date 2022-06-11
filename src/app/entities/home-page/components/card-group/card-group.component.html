@@ -1,5 +1,5 @@
 <ng-container *ngFor="let creatorCard of creatorCards; trackBy: trackByFn">
-    <a [href]="creatorCard.path" [routerLink]="creatorCard.path">
+    <a [href]="creatorCard.path" [routerLink]="creatorCard.path" [title]="creatorCard.title">
         <luna-creator-card class="card" [creatorCard]="creatorCard">
         </luna-creator-card>
     </a>
