@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ErrorNotFoundComponent } from './entities/error-pages/error-not-found/error-not-found.component';
 
 const routes: Routes = [
   {
@@ -54,6 +55,10 @@ const routes: Routes = [
       animationState: 'about',
     },
   },
+  {
+    path: '**',
+    component: ErrorNotFoundComponent,
+  }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -7,7 +7,7 @@ import { Subscription, timer } from 'rxjs';
 export class DelayedBackgroundImageDirective implements AfterViewInit, OnDestroy {
     @Input('delayedBackgroundImage') imageUrl!: string;
 
-    @Input() backgroundImageDelay = 500;
+    @Input() backgroundImageDelay = 300;
 
     private imageLoadSubscription!: Subscription;
 
