@@ -24,6 +24,23 @@
       max-height: 300px;
     }
 
+    .phone-number {
+      background: white;
+      padding: 8px 16px;
+      position: absolute;
+      right: 16px;
+      z-index: 10;
+      top: 16px;
+      font-size: 36px;
+      border-radius: 8px;
+      font-family: $menu-font;
+      letter-spacing: 2px;
+
+      @media screen and (max-width: 900px) {
+        display: none;
+      }
+    }
+
     a {
       color: white !important;
     }
