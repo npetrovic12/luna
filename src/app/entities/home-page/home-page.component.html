@@ -1,7 +1,7 @@
 <div class="top-area">
     <div class="main-background"></div>
     <div class="area-content">
-        <img class="logo" src="/assets/images/logo.webp" alt="Studio Luna Logo" height="163" width="344">
+        <img class="logo" src="/assets/images/logo.webp" alt="Studio Luna Logo" height="163" width="344" draggable="false">
         <nav class="menu">
             <ul>
                 <li>
@@ -16,15 +16,17 @@
                         </div>
                     </div>
                 </li>
-                <li routerLink="/about">O Nama</li>
-                <li routerLink="/contact">Kontakt</li>
+                <li> <a href="/about" routerLink="/about"> O Nama </a> </li>
+                <li><a href="/contact" routerLink="/contact"> Kontakt </a></li>
             </ul>
         </nav>
     </div>
 </div>
 <div class="main-area">
+
+    <h1 class="home-page-title"> Studio Luna - Iznjamljivanje venčanica </h1>
     <div class="creator-cards-title">
-        <h2>Kod nas ćete pronaći pravu venčanicu za Vas</h2>
+        <h2> Kod nas ćete pronaći pravu venčanicu za Vas </h2>
     </div>
     <luna-card-group [creatorCards]="creatorCards"></luna-card-group>
     <luna-content-card-group [cards]="contentCards"></luna-content-card-group>

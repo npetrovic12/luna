@@ -1,7 +1,7 @@
 <nav>
 
     <div class="logo">
-        <a [routerLink]="['/']">
+        <a [routerLink]="['/']" href="/">
             <img src="assets/images/logo.webp">
         </a>
     </div>
@@ -20,10 +20,10 @@
             </div>
         </li>
         <li [class.selected]="selectedModule === 'about'">
-            <a routerLinkActive="active" [routerLink]="['/about']"> O Nama </a>
+            <a routerLinkActive="active" href="/about" [routerLink]="['/about']"> O Nama </a>
         </li>
         <li [class.selected]="selectedModule === 'contact'">
-            <a [routerLink]="['/contact']"> Kontakt </a>
+            <a [routerLink]="['/contact']" href="/contact"> Kontakt </a>
         </li>
     </ul>
 

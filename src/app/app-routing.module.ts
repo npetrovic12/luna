@@ -9,13 +9,17 @@ const routes: Routes = [
   },
   {
     path: '',
-    loadChildren: () => import('./entities/home-page/home-page.module').then(m => m.HomePageModule)
+    loadChildren: () => import('./entities/home-page/home-page.module').then(m => m.HomePageModule),
+    data: {
+      animationState: 'home',
+    },
   },
   {
     path: 'la-sposa',
     loadChildren: () => import('./entities/la-sposa/la-sposa.module').then(m => m.LaSposaModule),
     data: {
       menuItem: 'dress',
+      animationState: 'dress',
     },
   },
   {
@@ -23,6 +27,7 @@ const routes: Routes = [
     loadChildren: () => import('./entities/nicole-couture/nicole-couture.module').then(m => m.NicoleCoutureModule),
     data: {
       menuItem: 'dress',
+      animationState: 'dress',
     },
   },
   {
@@ -30,6 +35,7 @@ const routes: Routes = [
     loadChildren: () => import('./entities/st-patrick/st-patrick.module').then(m => m.StPatrickModule),
     data: {
       menuItem: 'dress',
+      animationState: 'dress',
     },
   },
   {
@@ -37,6 +43,7 @@ const routes: Routes = [
     loadChildren: () => import('./entities/contact-page/contact-page.module').then(m => m.ContactPageModule),
     data: {
       menuItem: 'contact',
+      animationState: 'contact',
     },
   },
   {
@@ -44,6 +51,7 @@ const routes: Routes = [
     loadChildren: () => import('./entities/about/about.module').then(m => m.AboutModule),
     data: {
       menuItem: 'about',
+      animationState: 'about',
     },
   },
 ];

@@ -29,14 +29,18 @@ export class CardGroupComponent implements OnInit, OnDestroy {
     this.scrollTimer?.unsubscribe();
   }
 
-  @HostListener('touchstart', ['$event'])
-  private onTouchMove(ev: TouchEvent) {
-    this.touching = true;
+  trackByFn(index: number) {
+    return index;
   }
 
-  @HostListener('touchend')
-  private onTouchEnd() {
-    this.touching = false;
-  }
+  // @HostListener('touchstart', ['$event'])
+  // private onTouchMove(ev: TouchEvent) {
+  //   this.touching = true;
+  // }
+
+  // @HostListener('touchend')
+  // private onTouchEnd() {
+  //   this.touching = false;
+  // }
 
 }

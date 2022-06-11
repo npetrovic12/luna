@@ -39,13 +39,14 @@ export class HorizontalImageSliderComponent implements OnInit {
     this.elemRef.nativeElement.onmousemove = (ev: MouseEvent) => {
       this.transformPositionX -= 2 * ((this.oldMouseX || ev.screenX) - ev.screenX);
       this.oldMouseX = ev.screenX;
+      console.log(this.transformPositionX, this.oldMouseX);
 
       if (this.transformPositionX < -this._innerWrapper.nativeElement.scrollWidth * 3 / 5) {
-        this.transformPositionX = -this._innerWrapper.nativeElement.scrollWidth / 3;
+        this.transformPositionX = -this._innerWrapper.nativeElement.scrollWidth * 0.4;
       }
 
       if (this.transformPositionX > -this._innerWrapper.nativeElement.scrollWidth * 1 / 3) {
-        this.transformPositionX = -this._innerWrapper.nativeElement.scrollWidth * 2 / 3;
+        this.transformPositionX = -this._innerWrapper.nativeElement.scrollWidth * 0.6;
       }
 
       this.cdr.detectChanges();
@@ -58,11 +59,11 @@ export class HorizontalImageSliderComponent implements OnInit {
     this.oldMouseX = ev.changedTouches?.[0]?.screenX;
 
     if (this.transformPositionX < -this._innerWrapper.nativeElement.scrollWidth * 2 / 3) {
-      this.transformPositionX = -this._innerWrapper.nativeElement.scrollWidth / 3;
+      this.transformPositionX = -this._innerWrapper.nativeElement.scrollWidth * 0.4;
     }
 
     if (this.transformPositionX > -this._innerWrapper.nativeElement.scrollWidth * 1 / 3) {
-      this.transformPositionX = -this._innerWrapper.nativeElement.scrollWidth * 2 / 3;
+      this.transformPositionX = -this._innerWrapper.nativeElement.scrollWidth * 0.6;
     }
 
     this.cdr.detectChanges();
