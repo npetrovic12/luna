@@ -101,10 +101,10 @@
           &::after {
             content: "";
             position: absolute;
-            right: -64px;
+            right: -24px;
             top: 0;
             height: 100%;
-            width: 64px;
+            width: 24px;
             background: linear-gradient(90deg, rgba($background-color, 0.8), transparent);
           }
         }
@@ -130,10 +130,10 @@
           &::after {
             content: "";
             position: absolute;
-            left: -64px;
+            left: -24px;
             top: 0;
             height: 100%;
-            width: 64px;
+            width: 24px;
             background: linear-gradient(90deg, transparent, rgba($background-color, 0.8));
           }
         }
